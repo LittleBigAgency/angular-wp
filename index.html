@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]--> 
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]--> 
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]--> 
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en" ng-app="littleBigApplication"><!--<![endif]-->
+<head>
+<base href="/">
+<meta name="fragment" content="!">
+
+<title>{{metaTitle}}</title>
+
+<meta charset="{{metaCharset}}" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link rel="shortcut icon" href="/img/favicon.ico"/> -->
+
+<!--[if lt IE 9]>
+	<script src="build/libs/html5shiv.js"></script>
+	<script src="build/libs/respond.src.js"></script>
+<![endif]-->
+
+<!-- inject:css -->
+<link rel="stylesheet" href="http://lba.dev/build/libs/font-awesome.css">
+<link rel="stylesheet" href="http://lba.dev/build/assets/css/strapless/strapless.css">
+<!-- endinject -->
+</head>
+
+<body id="l-body" data-status="{{pageStatus}}">
+	<lba-main-menu></lba-main-menu>
+	<!-- <lba-secondary-nav></lba-secondary-nav> -->
+
+	<main id="l-main" role="main">
+    <div id="l-content" ui-view></div>
+    <lba-content-loader></lba-content-loader>
+  </main>
+
+	<!-- inject:js -->
+	<script src="http://lba.dev/build/libs/jquery.js"></script>
+	<script src="http://lba.dev/build/libs/angular.js"></script>
+	<script src="http://lba.dev/build/libs/angular-resource.js"></script>
+	<script src="http://lba.dev/build/libs/angular-route.js"></script>
+	<script src="http://lba.dev/build/libs/angular-sanitize.js"></script>
+	<script src="http://lba.dev/build/libs/angular-translate.js"></script>
+	<script src="http://lba.dev/build/libs/angular-ui-router.js"></script>
+	<script src="http://lba.dev/build/libs/bootstrap.js"></script>
+	<script src="http://lba.dev/build/app/app.modules.js"></script>
+	<script src="http://lba.dev/build/app/app.config.js"></script>
+	<script src="http://lba.dev/build/app/app.constants.js"></script>
+	<script src="http://lba.dev/build/app/components/app.components.js"></script>
+	<script src="http://lba.dev/build/app/main/app.main.js"></script>
+	<script src="http://lba.dev/build/app/resources/app.resources.js"></script>
+	<script src="http://lba.dev/build/app/main/blog/blog.js"></script>
+	<script src="http://lba.dev/build/app/main/pages/pages.js"></script>
+	<script src="http://lba.dev/build/app/components/category-select/category-select.js"></script>
+	<script src="http://lba.dev/build/app/components/content-loader/content-loader.js"></script>
+	<script src="http://lba.dev/build/app/components/main-menu/main-menu.js"></script>
+	<script src="http://lba.dev/build/app/main/nike-plus/nike-plus.js"></script>
+	<script src="http://lba.dev/build/app/main/pages/pages-controller.js"></script>
+	<script src="http://lba.dev/build/app/main/nike-plus/nike-plus-controller.js"></script>
+	<script src="http://lba.dev/build/app/resources/categories/get-category-terms.js"></script>
+	<script src="http://lba.dev/build/app/main/blog/blog-overview/blog-overview-controller.js"></script>
+	<script src="http://lba.dev/build/app/main/blog/blog-single/blog-single-controller.js"></script>
+	<script src="http://lba.dev/build/app/resources/menus/get-menus-resource-factory.js"></script>
+	<script src="http://lba.dev/build/app/resources/pages/get-page-resource-factory.js"></script>
+	<script src="http://lba.dev/build/app/resources/posts/get-posts-by-slug-resource-factory.js"></script>
+	<script src="http://lba.dev/build/app/resources/posts/get-posts-by-type-resource-factory.js"></script>
+	<script src="http://lba.dev/build/app/resources/posts/get-posts-resource-factory.js"></script>
+	<script src="http://lba.dev/build/app/resources/users/get-current-user-factory.js"></script>
+	<!-- endinject -->
+</body>
+</html>

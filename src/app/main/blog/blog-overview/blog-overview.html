@@ -1,0 +1,23 @@
+<section class="m-section-posts">
+  <lba-category-select></lba-category-select>
+
+  <div class="container-fluid">
+    <article class="m-article-overview" ng-repeat="post in ::blog.posts">
+      <a href="" ng-href="/blog/{{ ::post.slug }}" class="post-inlay">
+        <h2 class="post-title" ng-bind-html="::post.title"></h2>
+        <div class="post-meta">
+          <time ng-attr-datetime="{{ ::post.date | date : 'yyyy-MM-dd' }}" ng-bind-html="::post.date | date : 'MMMM d, yyyy'"></time>
+          <span ng-repeat="cat in ::post.terms.category" ng-bind-html="::cat.name"></span>
+        </div>
+      </a>
+    </article>
+    <article class="post-article" ng-if="!blog.contentLoader && !blog.posts.length">
+      <div class="posts-inlay">
+        <h2 class="post-title">{{ ::'BLOG_OVERVIEW_OTHER_CATEGORY' | translate }}</h2>
+        <div class="post-meta">
+          <span>{{ ::'BLOG_OVERVIEW_NO_RESULTS' | translate }} '{{ ::currentCategory.name }}'</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

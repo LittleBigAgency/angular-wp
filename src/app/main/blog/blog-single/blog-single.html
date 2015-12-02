@@ -1,0 +1,15 @@
+<section class="m-section-posts">
+  <div class="container-fluid">
+    <article class="m-article-single">
+      <header class="article-header" style="background-image: url({{blog.post.featured_image.guid}});">
+        <div class="article-header-overlay">
+          <div class="article-header-inlay">
+            <h1 class="article-header-title" ng-bind-html="blog.post.title"></h1>
+            <time class="article-header-datetime" ng-attr-datetime="{{blog.post.date | date:'yyyy-MM-dd'}}" ng-bind-html="blog.post.date | date:'MMMM d, yyyy'" ng-cloak></time>
+          </div>
+        </div>
+      </header>
+      <div class="article-content" ng-bind-html="blog.post.content"></div>
+    </article>
+  </div>
+</section>

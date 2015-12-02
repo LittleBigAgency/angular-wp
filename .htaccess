@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On 
+Options FollowSymLinks
+
+# Rewrite if a file or directory
+# not exists but keep the [NC]
+# otherwise it won't work
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /#/$1 [NC]
+
+# Rewrite the escape_fragment urls to
+# the snapshots directory
+RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+RewriteRule ^$ /snapshots/index.html? [QSA,NC]
+RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$
+RewriteRule ^(.*)$ /snapshots/$1/index.html? [QSA,NC]
+</IfModule>
